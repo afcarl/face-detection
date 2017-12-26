@@ -6,7 +6,5 @@ setup(
 	description="dlib face detection wrapper",
 
 	packages=["facedetection"],
-	package_data={'facedetection': ['shape_predictor_68_face_landmarks.dat']},
-
-	requires=["numpy", "dlib", "opencv-python"]
+	package_data={'facedetection': ['shape_predictor_68_face_landmarks.dat']}
 )
