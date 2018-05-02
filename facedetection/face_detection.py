@@ -54,7 +54,7 @@ class FaceDetector:
 		return [Landmark(landmarks.part(i).x, landmarks.part(i).y) for i in landmark_ids]
 
 	def _detect_face(self, image):
-		detections, scores, idx = self._detector.run(image, 1, -1)
+		detections, scores, idx = self._detector.run(image, upsample_num_times=0, adjust_threshold=-1)
 
 		if len(detections) == 0:
 			raise Exception("frame contains 0 faces")
